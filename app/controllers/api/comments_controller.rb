@@ -10,7 +10,7 @@ class Api::CommentsController < ApplicationController
     @article = Article.find(params[:id]).comments
     respond_to do |format|
       format.json { render :json => @article }
-      format.html { render :json => newJasonArray }
+      format.html { render :json => @article }
     end
 
   end
