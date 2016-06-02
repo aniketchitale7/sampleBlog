@@ -1,6 +1,8 @@
-<h1>Listing articles</h1>
+<body bgcolor="#f5f5dc">
+<h1>Your Articles</h1>
 <p>Welcome User <%= current_user.email%> </p>
 <%= link_to 'New article', new_article_path %>
+<%= link_to 'Logout', root_path %>
 <table>
   <tr>
     <th>Title</th>
@@ -20,3 +22,4 @@
   <% end %>
 </table>
 
+</body>
