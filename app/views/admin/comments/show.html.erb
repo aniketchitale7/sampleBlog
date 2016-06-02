@@ -1,0 +1,27 @@
+<h2>All Comments</h2>
+<%= will_paginate @article %>
+<% @article.reverse_each do |comment| %>
+    <p>
+      <strong>Commenter:</strong>
+      <%= comment.commenter %>
+    </p>
+
+    <p>
+      <strong>Comment:</strong>
+      <%= comment.body %>
+    </p>
+
+    <%= link_to 'Destroy Comment', [:admin, comment],
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+
+    <%= link_to 'View The Article', article_path %>
+
+<% end %>
+
+<p>
+<%= link_to 'Back', article_path %> </p>
+
+<p1><%= link_to 'Comments Jason' , api_comment_path %></p1>
+
+<p1><%= link_to 'Comments Jason Articles' , api_article_path %></p1>
