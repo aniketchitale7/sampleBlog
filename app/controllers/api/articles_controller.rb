@@ -21,6 +21,7 @@ class Api::ArticlesController < ApplicationController
 
     respond_to do |format|
       format.json { render :json => newJasonArray }
+      format.html { render :json => newJasonArray }
     end
 
   end
