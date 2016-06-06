@@ -1,9 +1,10 @@
 <body bgcolor="#f5f5dc">
 <h1>Your Articles</h1>
 <p>Welcome User <%= current_user.email%> </p>
+<div id="main-container" class="container-fluid">
 <%= link_to 'New article', new_article_path %>
 <%= link_to 'Logout', root_path %>
-<table>
+<table class = "table">
   <tr>
     <th>Title</th>
     <th>Text</th>
@@ -21,5 +22,5 @@
       </tr>
   <% end %>
 </table>
-
+</div>
 </body>

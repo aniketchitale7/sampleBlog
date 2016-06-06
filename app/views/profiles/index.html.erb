@@ -1,0 +1,32 @@
+<body bgcolor="#f5f5dc">
+<style>
+  h4 {text-align:center;}
+  p {text-align:center;}
+</style>
+<%  if @profiles.any? %>
+     <h4 text-align:center; > Your Profile </h4>
+    <table class = "table" align=" center">
+      <tr>
+        <th>Title</th>
+        <th>Text</th>
+      </tr>
+
+      <% @profiles.each do |profile| %>
+          <tr>
+            <td><%= profile.Firstname %></td>
+            <td><%= profile.LastName %></td>
+            <td><%= profile.Gender %></td>
+            <td><%= profile.dateofbirth %></td>
+            <td><%= profile.phone %></td>
+
+          </tr>
+      <% end %>
+    </table>
+
+   <% else %>
+        <p1> You do not have a Profile , Please Create one  </p1>
+        <%= link_to 'Create Profile', new_profile_path %>
+<% end %>
+
+
+</body>

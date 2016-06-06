@@ -14,7 +14,10 @@ Rails.application.routes.draw do
   end
   resources :articles do
    resources :comments
+
   end
+  resources :profiles
+
 
 
   # You can have the root of your site routed with "root"
